@@ -1,6 +1,6 @@
 ---
 name: "✨ Feature Request"
-about: Suggest an idea for improving AstroPaper
+about: Suggest a focused improvement for this website
 title: "[Feature Request]: "
 labels: enhancement
 assignees: ""

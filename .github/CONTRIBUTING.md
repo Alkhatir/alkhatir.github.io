@@ -1,55 +1,105 @@
-# How to contribute to AstroPaper
+# Contributing
 
-Thank you for your interest in contributing to **AstroPaper**! We appreciate every contribution, whether you're fixing a typo, improving documentation, or adding a new feature.
+Thanks for your interest in improving this personal website. The site is built
+with Astro and started from the AstroPaper template, but the content,
+configuration, and project direction are specific to Pierre Hanna's website,
+projects, and notes.
 
 ## Types of Contributions
 
-There are several ways to contribute to **AstroPaper**, and every contribution counts\_ whether it's a PR for a major feature or a small fix.
+Useful contributions include:
 
-You can also contribute by leaving review comments on PRs, adding ideas to existing GitHub Issues and Discussions, or helping others by answering questions in GitHub Discussions.
+- Fixing typos, broken links, metadata, or formatting issues
+- Suggesting topics, papers, tools, or questions that deserve attention
+- Proposing guest posts or draft articles for the blog
+- Reporting bugs in pages, RSS, search, navigation, or generated Open Graph
+  images
+- Improving accessibility, responsive layout, or performance
+- Suggesting focused improvements to the site's structure or developer workflow
+- Updating project documentation when it no longer reflects this repository
 
-Here’s a summary of the different ways you can contribute:
+Because this is a personal site, larger content changes, redesigns, and new
+features should start with an issue before a pull request.
 
-- [Opening a new issue](#open-a-new-issue)
-- [Submitting PRs](#feature-requests)
-  - [Solving an existing issue](#solving-an-issue)
-  - [Making changes to a blog post](#making-changes-to-a-blog-post)
-- [Helping others by answering issues/discussions](#helping-with-github-issuesdiscussions)
-- [Reviewing existing PRs](#reviewing-existing-prs)
-- [Starting a discussion](#starting-a-discussion)
+## Topic Suggestions and Guest Posts
 
-## Open a new Issue
+I welcome issues that point me toward topics worth investigating, especially in
+AI, machine learning, NLP, data science, software engineering, web development,
+and applied AI tooling. Even politics and theology are okay. A good topic
+suggestion explains why the topic matters, identifies what specific angle
+needs attention, and includes helpful links, references, or examples when available.
 
-If you find a bug or problem, first check whether a similar issue already exists. If you don’t find any open issue that addresses the bug/problem you’re facing, feel free to [open a new issue](https://github.com/satnaing/astro-paper/issues/new/choose).
+Guest post ideas are welcome too. Please open an issue before writing a full
+post unless the change is very small. A proposal should include the working
+title, intended audience, outline, and any relevant background or sources.
+
+Guest posts should:
+
+- Be original work or clearly cite any reused ideas, data, images, or code
+- Be technically accurate and transparent about uncertainty
+- Fit the tone and subject areas of this blog
+- Avoid promotional, sponsored, affiliate, or SEO-driven content
+- Disclose conflicts of interest when relevant
+- Include author attribution if the post is accepted
+
+Final publication, editing, and whether a post fits the blog are at the site
+maintainer's discretion.
+
+## Open an Issue
+
+Before opening an issue, check whether a similar issue already exists. When
+reporting a bug, include:
+
+- The affected page or route
+- Steps to reproduce the problem
+- Expected and actual behavior
+- Browser/device details when the issue is visual or interactive
+- Screenshots or console output when helpful
 
 ## Feature Requests
 
-If you have an idea for a new feature or enhancement that could improve AstroPaper, we’d love to hear it! Before submitting a new feature request, please:
+Feature requests should explain the problem they solve for this site. Please
+keep proposals scoped to the current project rather than the upstream
+AstroPaper template. For substantial UI, content model, or workflow changes,
+open an issue first so the direction can be discussed before implementation.
 
-1. **Check existing discussions/issues**: Review the [Discussions](https://github.com/satnaing/astro-paper/discussions) or [Issues](https://github.com/satnaing/astro-paper/issues) to see if the feature has already been requested or discussed. You can contribute by adding your thoughts or upvoting existing requests.
-2. **Open a new issue**: If you don’t find an existing discussion, you can open a new issue using the [Feature Request Template](https://github.com/satnaing/astro-paper/issues/new?assignees=&labels=enhancement&projects=&template=%E2%9C%A8-feature-request.md&title=%5BFeature+Request%5D%3A+). Be as detailed as possible, describing the problem this feature would solve and how it would benefit AstroPaper users.
-3. **Discuss first**: If you’re unsure whether your idea is feasible or fits the project’s goals, feel free to [start a GitHub Discussion](https://github.com/satnaing/astro-paper/discussions/new/choose) to gather feedback from the community.
+## Pull Requests
 
-## Making PRs (Pull Requests)
+1. Keep changes focused on one concern.
+2. Follow the existing TypeScript, Astro, Markdown, and Tailwind conventions.
+3. Do not hand-edit generated output such as `dist/`, `.astro/`, or
+   `public/pagefind/`.
+4. Add or update documentation when behavior, commands, or content workflows
+   change.
+5. Include screenshots for visible UI changes.
 
-### Solving an Issue
+Before opening a PR, run the relevant checks:
 
-Browse through the existing issues to find one that interests you. You can use labels to filter the issues. See the [Label](https://github.com/satnaing/astro-paper/labels) section for more information.
+```sh
+pnpm lint
+pnpm format:check
+pnpm build
+```
 
-### Making Changes to a Blog Post
+For UI or content changes, also run `pnpm preview` and manually check affected
+pages. Search, RSS, responsive layout, and generated Open Graph images should be
+checked when the change touches those areas.
 
-For small changes like typos, syntax fixes, or broken links, click the "Suggest Changes" link below the title of any blog post. This will take you to the .md file, where you can make your changes and submit a pull request for review. For more significant changes to a blog post, it’s recommended to open a new issue or discussion first.
+## Content Changes
 
-## Helping with GitHub Issues/Discussions
+Small typo, link, and metadata fixes are welcome. Please avoid rewriting posts,
+project descriptions, biography text, or opinions without prior discussion,
+because those are personal content owned by the site author.
 
-GitHub Discussions and Issues are great places to help others. Whether you're a long-time user of AstroPaper or just have experience with a specific problem, we encourage you to answer questions or solve issues when possible.
+For new posts or major edits, start with a topic or guest post proposal issue.
+Accepted drafts should use the existing content structure and frontmatter style,
+and any claims that depend on current facts, external data, or third-party
+behavior should include sources.
 
-## Reviewing Existing PRs
+Blog posts live in `src/content/posts/`. Standalone pages live in
+`src/content/pages/`.
 
-You can help by reviewing and providing feedback on open PRs. Different perspectives can be very helpful.
+## Reviewing
 
-Since AstroPaper doesn’t currently have automated testing, it’s especially useful if you can do manual testing on open PRs and provide feedback.
-
-## Starting a Discussion
-
-If you’re unsure whether your issue warrants a fix or if you just want to share ideas and get feedback, feel free to [start a GitHub discussion](https://github.com/satnaing/astro-paper/discussions/new/choose). It’s a great way to engage with the community.
+Review feedback should focus on correctness, accessibility, maintainability,
+and whether the change fits the purpose of this personal website.

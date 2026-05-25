@@ -1,6 +1,6 @@
 ---
 name: "\U0001F4DD Documentation Improvement"
-about: Propose updates or improvements to the documentation/blog posts
+about: Propose updates to project docs, site copy, or blog metadata
 title: "[Docs]: "
 labels: documentation
 assignees: ""

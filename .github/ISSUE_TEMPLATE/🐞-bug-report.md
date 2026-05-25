@@ -1,6 +1,6 @@
 ---
 name: "\U0001F41E Bug report"
-about: Report a bug or unexpected behavior in AstroPaper
+about: Report a bug or unexpected behavior on this website
 title: "[BUG]: "
 labels: bug
 assignees: ""
@@ -19,6 +19,9 @@ Steps to reproduce the behavior:
 
 **Expected behavior**
 A clear and concise description of what you expected to happen.
+
+**Environment**
+Browser, device, viewport size, or operating system details when relevant.
 
 **Screenshots**
 If applicable, add screenshots to help explain your problem.
