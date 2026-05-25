@@ -154,7 +154,12 @@ All commands are run from the root of the project, from a terminal:
 
 ## ✨ Feedback & Suggestions
 
-If you have any suggestions/feedback, you can contact me via [my email](mailto:satnaingdev+astropaper@gmail.com). Alternatively, feel free to open an issue if you find bugs or want to request new features.
+Please feel free to contact me in case you a suggestion or an issue with the
+website. Otherwise, I am open for a chit-chat!
+
+You can find me on [GitHub](https://github.com/Alkhatir),
+[X](https://x.com/Peet_Alkhatir), or
+[LinkedIn](https://www.linkedin.com/in/peer-hanna/).
 
 ## 📜 License
 
