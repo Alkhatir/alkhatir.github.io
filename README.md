@@ -6,37 +6,29 @@
 ![GitHub](https://img.shields.io/github/license/satnaing/astro-paper?color=%232F3741&style=for-the-badge)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white&style=for-the-badge)](https://conventionalcommits.org)
 
-AstroPaper is a minimal, responsive, accessible and SEO-friendly Astro blog theme. This theme is designed and crafted based on [my personal blog](https://satnaing.dev/blog).
+This is the source code for my personal website, hosted with GitHub Pages at
+[alkhatir.github.io](https://alkhatir.github.io).
 
-Read [the blog posts](https://astro-paper.pages.dev/posts/) or check [the README Documentation Section](#-documentation) for more info.
+The site is built from the AstroPaper template and customized as a place for my
+projects, notes, technical writing, and personal updates. I use it to document
+work around artificial intelligence, software engineering, data science, web
+development, and tools I am currently exploring.
 
-## 🔥 Features
+## About This Site
 
-- [x] type-safe markdown
-- [x] super fast performance
-- [x] accessible (Keyboard/VoiceOver)
-- [x] responsive (mobile ~ desktops)
-- [x] SEO-friendly
-- [x] light & dark mode
-- [x] static search ([Pagefind](https://pagefind.app/))
-- [x] draft posts & pagination
-- [x] sitemap & rss feed
-- [x] MDX support
-- [x] collapsible table of contents
-- [x] followed best practices
-- [x] highly customizable
-- [x] dynamic OG image generation for blog posts ([Blog Post](https://astro-paper.pages.dev/posts/dynamic-og-image-generation-in-astropaper-blog-posts/))
-- [x] i18n ready
+- Personal homepage for Pierre Hanna.
+- Blog and notes powered by Markdown.
+- Project writeups for AI, software engineering, and related technical work.
+- Fast static site generated with Astro.
+- Responsive layout with light and dark mode.
+- SEO, RSS, sitemap, search, and dynamic Open Graph image support inherited from
+  AstroPaper.
 
-_Note: I've tested screen-reader accessibility of AstroPaper using **VoiceOver** on Mac and **TalkBack** on Android. I couldn't test all other screen-readers out there. However, accessibility enhancements in AstroPaper should be working fine on others as well._
+## Status
 
-## ✅ Lighthouse Score
-
-<p align="center">
-  <a href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fastro-paper.pages.dev%2F&form_factor=desktop">
-    <img width="710" alt="AstroPaper Lighthouse Score" src="AstroPaper-lighthouse-score.svg">
-  </a>
-</p>
+This website is in active development. The current focus is replacing the
+default AstroPaper content with my own homepage, about page, project notes, and
+blog posts.
 
 ## 🚀 Project Structure
 
@@ -97,7 +89,9 @@ Documentation can be read in two formats\_ _markdown_ & _blog post_.
 
 ## 👨🏻‍💻 Running Locally
 
-You can start using this project locally by running the following command in your desired directory:
+### In case you want to start from scratch
+
+You can have the same project template by running the following command in your desired directory:
 
 ```bash
 # pnpm
@@ -113,6 +107,8 @@ yarn create astro --template satnaing/astro-paper
 bun create astro@latest -- --template satnaing/astro-paper
 ```
 
+### Starting the server and installing the dependencies
+
 Then start the project by running the following commands:
 
 ```bash
@@ -123,34 +119,38 @@ pnpm install
 pnpm dev
 ```
 
-## Google Site Verification (optional)
+As an alternative approach, if you have Docker installed, you can use Docker to run this project locally. Here's how:
 
-You can add your [Google Site Verification HTML tag](https://support.google.com/webmasters/answer/9008080#meta_tag_verification&zippy=%2Chtml-tag) by setting `site.googleVerification` in `astro-paper.config.ts`:
+```bash
+# Build the Docker image
+docker build -t astropaper .
 
-```ts file="astro-paper.config.ts"
-export default defineAstroPaperConfig({
-  site: {
-    // ...
-    googleVerification: "your-google-site-verification-value",
-  },
-  // ...
-});
+# Run the Docker container
+docker run -p 4321:80 astropaper
 ```
-
-> See [this discussion](https://github.com/satnaing/astro-paper/discussions/334#discussioncomment-10139247) for adding AstroPaper to the Google Search Console.
 
 ## 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:
 
-| Command          | Action                                                                                                                           |
-| :--------------- | :------------------------------------------------------------------------------------------------------------------------------- |
-| `pnpm install`   | Installs dependencies                                                                                                            |
-| `pnpm dev`       | Starts local dev server at `localhost:4321`                                                                                      |
-| `pnpm build`     | Type-checks, builds the site, runs Pagefind indexing, and copies the index to `public/pagefind/`                                 |
-| `pnpm preview`   | Preview your build locally, before deploying                                                                                     |
-| `pnpm sync`      | Generates TypeScript types for all Astro modules. [Learn more](https://docs.astro.build/en/reference/cli-reference/#astro-sync). |
-| `pnpm astro ...` | Run CLI commands like `astro add`, `astro check`                                                                                 |
+> **_Note!_** For `Docker` commands we must have it [installed](https://docs.docker.com/engine/install/) in your machine.
+
+| Command                              | Action                                                                                                                           |
+| :----------------------------------- | :------------------------------------------------------------------------------------------------------------------------------- |
+| `pnpm install`                       | Installs dependencies                                                                                                            |
+| `pnpm dev`                           | Starts local dev server at `localhost:4321`                                                                                      |
+| `pnpm build`                         | Build your production site to `./dist/`                                                                                          |
+| `pnpm preview`                       | Preview your build locally, before deploying                                                                                     |
+| `pnpm format:check`                  | Check code format with Prettier                                                                                                  |
+| `pnpm format`                        | Format codes with Prettier                                                                                                       |
+| `pnpm sync`                          | Generates TypeScript types for all Astro modules. [Learn more](https://docs.astro.build/en/reference/cli-reference/#astro-sync). |
+| `pnpm lint`                          | Lint with ESLint                                                                                                                 |
+| `docker compose up -d`               | Run AstroPaper on docker, You can access with the same hostname and port informed on `dev` command.                              |
+| `docker compose run app npm install` | You can run any command above into the docker container.                                                                         |
+| `docker build -t astropaper .`       | Build Docker image for AstroPaper.                                                                                               |
+| `docker run -p 4321:80 astropaper`   | Run AstroPaper on Docker. The website will be accessible at `http://localhost:4321`.                                             |
+
+> **_Warning!_** Windows PowerShell users may need to install the [concurrently package](https://www.npmjs.com/package/concurrently) if they want to [run diagnostics](https://docs.astro.build/en/reference/cli-reference/#astro-check) during development (`astro check --watch & astro dev`). For more info, see [this issue](https://github.com/satnaing/astro-paper/issues/113).
 
 ## ✨ Feedback & Suggestions
 
@@ -158,8 +158,9 @@ If you have any suggestions/feedback, you can contact me via [my email](mailto:s
 
 ## 📜 License
 
-Licensed under the MIT License, Copyright © 2026
+This site is based on the MIT-licensed
+[AstroPaper](https://github.com/satnaing/astro-paper) template.
 
 ---
 
-Made with 🤍 by [Sat Naing](https://satnaing.dev) 👨🏻‍💻 and [contributors](https://github.com/satnaing/astro-paper/graphs/contributors).
+Built by [Pierre Hanna](https://github.com/Alkhatir).
